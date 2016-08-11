@@ -9,13 +9,14 @@
     "test": "NODE_PATH=$NODE_PATH:$PWD/src mocha --compilers js:babel-core/register,js:babel-polyfill,css:test/css-null-compiler.js --recursive",
     "webpack:client-prod": "NODE_ENV=production webpack --config webpack/client.js --progress ",
     "dist": "npm run clean && npm run webpack:client-prod",
-    "start": "CLIENT_PORT=8000 NODE_ENV=development webpack-dev-server --inline --config webpack/client.js",
+    "start": "CLIENT_PORT=4000 NODE_ENV=development webpack-dev-server --inline --config webpack/client.js",
     "start:dist": "npm run dist && cp index.html dist/ && cd dist && open index.html",
     "precommit": "npm run check && npm test",
     "commitmsg": "node validate-commit-msg.js"
   },
   "dependencies": {
     "antd": "^1.5.0",
+    "fullpage-react": "^1.0.7",
     "immutable": "^3.8.1",
     "isomorphic-style-loader": "^1.0.0",
     "normalize.css": "^4.1.1",
@@ -68,7 +69,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "engines": {
-    "node": "6.0.0",
-    "npm": "3.8.6"
+    "node": "6.2.0",
+    "npm": "3.8.9"
   }
 }

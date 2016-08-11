@@ -2,8 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.content .main {
-  margin-top: 10px;
-  text-align: center;
-}

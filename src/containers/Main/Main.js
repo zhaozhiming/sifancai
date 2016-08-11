@@ -4,9 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as MainActions from './actions';
-import Name from 'components/Name';
-import Header from './components/Header';
-import Message from './components/Message';
+import SiFull from './components/SiFull';
 
 
 function mapStateToProps(state) {
@@ -38,14 +36,9 @@ class Main extends Component {
   }
 
   render() {
-    const { name, message } = this.props.main.toJS();
     return (
       <div className={style.content}>
-        <Header />
-        <div className={style.main} >
-          <Name name={name} mainActions={this.props.mainActions} />
-          <Message message={message} />
-        </div>
+        <SiFull />
       </div>
     );
   }
