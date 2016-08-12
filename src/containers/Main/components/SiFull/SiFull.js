@@ -2,7 +2,11 @@ import style from './style.css';
 
 import React, { Component } from 'react';
 import { Fullpage, Slide } from 'fullpage-react';
-import food from 'images/food.png';
+import small1 from 'images/food/small1.jpg';
+import small2 from 'images/food/small2.jpg';
+import small3 from 'images/food/small3.jpg';
+import small4 from 'images/food/small4.jpg';
+import big1 from 'images/food/big1.jpg';
 
 
 class SiFull extends Component {
@@ -35,24 +39,35 @@ class SiFull extends Component {
         <Slide>
           <ul className={style.list}>
             <li className={style.item}>
-              <img className={style.img} alt="food" src={food} />
-              <span className={style.title}>example 1</span>
-              <span className={style.price}>¥10</span>
+              <img className={style.img} alt="food" src={small1} />
+              <span className={style.title}>Heaven in a Box: Our Sampler</span>
+              <span className={style.price}>¥60</span>
             </li>
             <li className={style.item}>
-              <img className={style.img} alt="food" src={food} />
+              <img className={style.img} alt="food" src={small2} />
               <span className={style.title}>Black And White Cookie</span>
-              <span className={style.price}>$15</span>
+              <span className={style.price}>¥15</span>
             </li>
             <li className={style.item}>
-              <img className={style.img} alt="food" src={food} />
-              <span className={style.title}>example 2</span>
-              <span className={style.price}>¥10</span>
+              <img className={style.img} alt="food" src={small3} />
+              <span className={style.title}>For The Love Of Chocolate</span>
+              <span className={style.price}>¥65</span>
             </li>
           </ul>
         </Slide>
         <Slide>
-          <div>Fullpage React 3</div>
+          <ul className={style.list}>
+            <li className={style.item}>
+              <img className={style.img} alt="food" src={big1} />
+              <span className={style.title}>Heaven in a Box: Our Sampler</span>
+              <span className={style.price}>¥10</span>
+            </li>
+            <li className={style.item}>
+              <img className={style.img} alt="food" src={small4} />
+              <span className={style.title}>Black And White Cookie</span>
+              <span className={style.price}>$15</span>
+            </li>
+          </ul>
         </Slide>
       </Fullpage>
     );
