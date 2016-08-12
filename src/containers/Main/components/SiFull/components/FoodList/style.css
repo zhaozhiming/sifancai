@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.list-responsive {
+  flex-direction: initial;
+}
+
+.list li:last-child {
+  border-right: 1px solid #ded5c8;
+}
+
+@media screen and (max-width: 600px) {
+  .list-responsive {
+    flex-direction: column;
+  }
+
+  .list li:last-child {
+    border-bottom: 1px solid #ded5c8;
+  }
+}
+

@@ -1,9 +1,8 @@
 import style from './style.css';
 
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import { Fullpage, Slide } from 'fullpage-react';
-import FoodItem from '../FoodItem';
+import FoodList from './components/FoodList';
 import small1 from 'images/food/small1.jpg';
 import small2 from 'images/food/small2.jpg';
 import small3 from 'images/food/small3.jpg';
@@ -30,31 +29,52 @@ class SiFull extends Component {
   }
 
   render() {
+    const b1 = {
+      img: big1,
+      name: 'Salted Caramel Cashew Tart',
+      price: 10,
+      big: true,
+    };
+    const s1 = {
+      img: small1,
+      name: 'Heaven in a Box: Our Sampler',
+      price: 60,
+      big: false,
+    };
+    const s2 = {
+      img: small2,
+      name: 'Black And White Cookie',
+      price: 15,
+      big: false,
+    };
+    const s3 = {
+      img: small3,
+      name: 'Black And White Cookie',
+      price: 65,
+      big: false,
+    };
+    const s4 = {
+      img: small4,
+      name: 'Chocolate Sable Cookies',
+      price: 15,
+      big: false,
+    };
+    const foods1 = [b1, s1, s2, s3];
+    const foods2 = [s1, s2, s3];
+    const foods3 = [b1, s4];
     return (
       <Fullpage
         active={this.updateActiveState}
         className={style.main}
       >
         <Slide>
-          <ul className={classnames(style.list, style['list-responsive'])}>
-            <FoodItem img={big1} name="Heaven in a Box: Our Sampler" price={10} big />
-            <FoodItem img={small1} name="Heaven in a Box: Our Sampler" price={60} />
-            <FoodItem img={small2} name="Black And White Cookie" price={15} />
-            <FoodItem img={small3} name="For The Love Of Chocolate" price={65} />
-          </ul>
+          <FoodList foods={foods1} />
         </Slide>
         <Slide>
-          <ul className={classnames(style.list, style['list-responsive'])}>
-            <FoodItem img={small1} name="Heaven in a Box: Our Sampler" price={60} />
-            <FoodItem img={small2} name="Black And White Cookie" price={15} />
-            <FoodItem img={small3} name="For The Love Of Chocolate" price={65} />
-          </ul>
+          <FoodList foods={foods2} />
         </Slide>
         <Slide>
-          <ul className={classnames(style.list, style['list-responsive'])}>
-            <FoodItem img={big1} name="Heaven in a Box: Our Sampler" price={10} big />
-            <FoodItem img={small4} name="Black And White Cookie" price={15} />
-          </ul>
+          <FoodList foods={foods3} />
         </Slide>
       </Fullpage>
     );
