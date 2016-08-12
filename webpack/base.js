@@ -52,6 +52,10 @@ module.exports = {
         include: modulesPath,
         exclude: srcPath,
       },
+      {
+        test: /\.(png|jpg|gif|woff|woff2)$/,
+        loader: 'url-loader?limit=8192',
+      },
     ],
   },
   plugins: [
