@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-left: 1px solid #ded5c8;
+}
+
+.big {
+  flex-grow: 2;
+}
+
+.item .img {
+  max-width: 90%;
+}
+
+.item .title {
+  font-size: 22px;
+  line-height: 28px;
+  color: #655352;
+  font-family: 'Lyon Text Web';
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.item .price {
+  font-size: 14px;
+  line-height: 18px;
+  color: #b6aea3;
+  font-family: "futura-pt-n4", "futura-pt", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
