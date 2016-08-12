@@ -8,6 +8,10 @@
   border-left: 1px solid #ded5c8;
 }
 
+.item:hover {
+  cursor: pointer;
+}
+
 .big {
   flex-grow: 2;
 }
@@ -40,4 +44,11 @@
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.1em;
+
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.item:hover .price {
+  color: #00336e;
 }
