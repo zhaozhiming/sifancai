@@ -15,10 +15,12 @@ class FoodItem extends Component {
   render() {
     const { img, name, price, big } = this.props;
     return (
-      <li className={classnames(style.item, { [`${style.big}`]: big })}>
+      <li className={classnames(style.item, style['item-responsive'], { [`${style.big}`]: big })}>
         <img className={style.img} alt={name} src={img} />
-        <span className={style.title}>{name}</span>
-        <span className={style.price}>¥{price}</span>
+        <div className={style.description}>
+          <span className={classnames(style.title, style.animation)}>{name}</span>
+          <span className={classnames(style.price, style.animation)}>¥{price}</span>
+        </div>
       </li>
     );
   }

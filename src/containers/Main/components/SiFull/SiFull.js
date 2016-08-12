@@ -1,6 +1,7 @@
 import style from './style.css';
 
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { Fullpage, Slide } from 'fullpage-react';
 import FoodItem from '../FoodItem';
 import small1 from 'images/food/small1.jpg';
@@ -35,17 +36,22 @@ class SiFull extends Component {
         className={style.main}
       >
         <Slide>
-          <div>Fullpage React 1</div>
-        </Slide>
-        <Slide>
-          <ul className={style.list}>
+          <ul className={classnames(style.list, style['list-responsive'])}>
+            <FoodItem img={big1} name="Heaven in a Box: Our Sampler" price={10} big />
             <FoodItem img={small1} name="Heaven in a Box: Our Sampler" price={60} />
             <FoodItem img={small2} name="Black And White Cookie" price={15} />
             <FoodItem img={small3} name="For The Love Of Chocolate" price={65} />
           </ul>
         </Slide>
         <Slide>
-          <ul className={style.list}>
+          <ul className={classnames(style.list, style['list-responsive'])}>
+            <FoodItem img={small1} name="Heaven in a Box: Our Sampler" price={60} />
+            <FoodItem img={small2} name="Black And White Cookie" price={15} />
+            <FoodItem img={small3} name="For The Love Of Chocolate" price={65} />
+          </ul>
+        </Slide>
+        <Slide>
+          <ul className={classnames(style.list, style['list-responsive'])}>
             <FoodItem img={big1} name="Heaven in a Box: Our Sampler" price={10} big />
             <FoodItem img={small4} name="Black And White Cookie" price={15} />
           </ul>
