@@ -5,6 +5,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as MainActions from './actions';
 import SiFull from './components/SiFull';
+import foodData from 'fixture/food';
+import { bingo } from 'utils/arrayUtils';
+import _ from 'lodash';
 
 
 function mapStateToProps(state) {
@@ -30,15 +33,34 @@ class Main extends Component {
     mainActions: PropTypes.object,
   };
 
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      foodlist: bingo(_.cloneDeep(foodData)),
+    };
+  }
+
   getChildContext() {
     const { main, mainActions } = this.props;
     return { main, mainActions };
   }
 
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize.bind(this));
+  }
+
+  handleResize() {
+    this.setState({ foodlist: bingo(_.cloneDeep(foodData)) });
+  }
+
   render() {
     return (
       <div className={style.content}>
-        <SiFull />
+        <SiFull foodlist={this.state.foodlist} />
       </div>
     );
   }
