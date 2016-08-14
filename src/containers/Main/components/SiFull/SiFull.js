@@ -1,7 +1,6 @@
 import style from './style.css';
 
 import React, { Component, PropTypes } from 'react';
-import { Fullpage, Slide } from 'fullpage-react';
 import FoodList from './components/FoodList';
 import _ from 'lodash';
 
@@ -13,38 +12,27 @@ class SiFull extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      active: 0,
-    };
-    this.updateActiveState = this.updateActiveState.bind(this);
+    this.state = {};
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return nextState.active !== this.state.active
-      || !_.isEqual(nextProps.foodlist, this.props.foodlist);
-  }
-
-  updateActiveState(newActive) {
-    this.setState({ active: newActive });
+  shouldComponentUpdate(nextProps) {
+    return !_.isEqual(nextProps.foodlist, this.props.foodlist);
   }
 
   renderSlides() {
     const { foodlist } = this.props;
     return foodlist.map((foods, i) => (
-      <Slide key={i}>
+      <session key={i}>
         <FoodList foods={foods} />
-      </Slide>
+      </session>
     ));
   }
 
   render() {
     return (
-      <Fullpage
-        active={this.updateActiveState}
-        className={style.main}
-      >
+      <div className={style.main} >
         {this.renderSlides()}
-      </Fullpage>
+      </div>
     );
   }
 }

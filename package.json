@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "antd": "^1.5.0",
-    "fullpage-react": "^1.0.7",
     "immutable": "^3.8.1",
     "isomorphic-style-loader": "^1.0.0",
     "normalize.css": "^4.1.1",

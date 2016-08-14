@@ -14,8 +14,12 @@ class FoodItem extends Component {
 
   render() {
     const { img, name, price, big } = this.props;
+    const liStyle = classnames(
+      style.item,
+      style['item-responsive'],
+      { [`${style.big}`]: big });
     return (
-      <li className={classnames(style.item, style['item-responsive'], { [`${style.big}`]: big })}>
+      <li className={liStyle}>
         <img className={style.img} alt={name} src={img} />
         <div className={style.description}>
           <span className={classnames(style.title, style.animation)}>{name}</span>
