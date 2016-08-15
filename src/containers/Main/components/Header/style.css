@@ -11,14 +11,14 @@
 }
 
 .header .top .title {
-  margin-top: 10px;
-  width: 45%;
+  margin-top: 20px;
+  font-size: 40px;
+  color: silver;
 }
 
 .header .top .subtitle {
   font-size: 20px;
   margin-top: 10px;
-  color: silver;
 }
 
 .header .top .img {
