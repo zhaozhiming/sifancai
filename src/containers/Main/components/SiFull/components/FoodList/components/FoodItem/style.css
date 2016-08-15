@@ -3,7 +3,6 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
 .item-responsive {
@@ -78,6 +77,10 @@
 
   .item .description {
     align-items: flex-start;
+  }
+
+  .item .title {
+    text-align: left;
   }
 
   .item .img {

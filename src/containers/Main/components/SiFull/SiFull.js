@@ -22,9 +22,9 @@ class SiFull extends Component {
   renderSlides() {
     const { foodlist } = this.props;
     return foodlist.map((foods, i) => (
-      <session key={i}>
+      <section key={i}>
         <FoodList foods={foods} />
-      </session>
+      </section>
     ));
   }
 
