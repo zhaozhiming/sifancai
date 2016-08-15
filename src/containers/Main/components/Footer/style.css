@@ -37,11 +37,17 @@
 }
 
 .footer .contact .qrcode {
-  width: 15%;
+  width: 150px;
 }
 
 .footer .contact .location {
   font-size: 40px;
   margin-top: 15px;
   color: #e04c46;
+}
+
+@media screen and (max-width: 600px) {
+  .footer .top {
+    letter-spacing: 5px;
+  }
 }

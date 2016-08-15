@@ -3,6 +3,7 @@ import style from './style.css';
 import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import header from 'images/header.jpg';
+import cat from 'images/cat.png';
 
 class Header extends Component {
   static propTypes = {
@@ -30,7 +31,9 @@ class Header extends Component {
         <span className={style.middle}>
           ~欢迎光临~
         </span>
-        <div className={style.bottom}></div>
+        <div className={style.bottom}>
+          <img className={style.cat} alt="img" src={cat} />
+        </div>
       </div>
     );
   }
