@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import * as MainActions from './actions';
 import Header from './components/Header';
 import SiFull from './components/SiFull';
+import Footer from './components/Footer';
 import foodData from 'fixture/food';
 import { bingo } from 'utils/arrayUtils';
 import _ from 'lodash';
@@ -63,6 +64,7 @@ class Main extends Component {
       <div className={style.content}>
         <Header />
         <SiFull foodlist={this.state.foodlist} />
+        <Footer />
       </div>
     );
   }
