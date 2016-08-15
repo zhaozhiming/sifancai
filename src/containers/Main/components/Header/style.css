@@ -1,11 +1,51 @@
 .header {
-  height: 80px;
-  background-color: #666;
+  margin-bottom: 20px;
 }
 
-.header .title {
-  font-size: 40px;
+.header .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+}
+
+.header .top .title {
+  margin-top: 10px;
+  width: 45%;
+}
+
+.header .top .subtitle {
+  font-size: 20px;
+  margin-top: 10px;
   color: silver;
-  margin-left: 20px;
-  line-height: 80px;
+}
+
+.header .top .img {
+  width: 30%;
+}
+
+.header .middle {
+  background-color: #e04c46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  margin-top: -25px;
+
+  font-size: 20px;
+  letter-spacing: 30px;
+  color: white;
+}
+
+.header .bottom {
+  background-color: #282828;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

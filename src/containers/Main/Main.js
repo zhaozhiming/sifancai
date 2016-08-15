@@ -4,6 +4,7 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as MainActions from './actions';
+import Header from './components/Header';
 import SiFull from './components/SiFull';
 import foodData from 'fixture/food';
 import { bingo } from 'utils/arrayUtils';
@@ -60,6 +61,7 @@ class Main extends Component {
   render() {
     return (
       <div className={style.content}>
+        <Header />
         <SiFull foodlist={this.state.foodlist} />
       </div>
     );
