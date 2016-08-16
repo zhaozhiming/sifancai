@@ -43,7 +43,6 @@
   font-size: 22px;
   line-height: 28px;
   color: #655352;
-  font-family: 'Lyon Text Web';
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -55,10 +54,10 @@
   font-size: 14px;
   line-height: 18px;
   color: #b6aea3;
-  font-family: "futura-pt-n4", "futura-pt", sans-serif;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.1em;
+  margin-top: 5px;
 }
 
 .item:hover .title,
