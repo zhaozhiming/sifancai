@@ -2,7 +2,7 @@ import style from './style.css';
 
 import classnames from 'classnames';
 import React, { Component } from 'react';
-import qrcode from 'images/qrcode.jpg';
+import qrcode from 'images/qrcode.png';
 import { Icon } from 'antd';
 
 
