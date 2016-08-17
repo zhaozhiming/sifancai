@@ -56,6 +56,7 @@ if (process.env.NODE_ENV === 'development') {
     inline: false,
     lazy: false,
     noInfo: false,
+    quiet: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
     stats: { colors: true },
   };

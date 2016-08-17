@@ -5,6 +5,10 @@ const styleLintPlugin = require('stylelint-webpack-plugin');
 
 const srcPath = path.join(__dirname, '/../src');
 const modulesPath = path.join(__dirname, '/../node_modules');
+const Dashboard = require('webpack-dashboard');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const dashboard = new Dashboard();
+
 
 module.exports = {
   cache: false,
@@ -64,10 +68,11 @@ module.exports = {
       'Promise': 'bluebird',
     }),
     new ExtractTextPlugin('[name].css', { allChunks: true }),
-     new styleLintPlugin({
+    new styleLintPlugin({
       configFile: path.join(__dirname, '../.stylelintrc'),
       files: '../src/**/*.css',
     }),
+    new DashboardPlugin(dashboard.setData),
   ],
   postcss: () => {
     return [

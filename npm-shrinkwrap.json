@@ -660,6 +660,11 @@
         }
       }
     },
+    "blessed": {
+      "version": "0.1.81",
+      "from": "blessed@>=0.1.81 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/blessed/download/blessed-0.1.81.tgz"
+    },
     "bluebird": {
       "version": "3.4.1",
       "from": "bluebird@>=3.1.1 <4.0.0",
@@ -1664,6 +1669,11 @@
       "version": "2.0.0",
       "from": "filename-regex@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npm.taobao.org/filename-regex/download/filename-regex-2.0.0.tgz"
+    },
+    "filesize": {
+      "version": "3.3.0",
+      "from": "filesize@>=3.3.0 <4.0.0",
+      "resolved": "https://registry.npm.taobao.org/filesize/download/filesize-3.3.0.tgz"
     },
     "fill-range": {
       "version": "2.2.3",
