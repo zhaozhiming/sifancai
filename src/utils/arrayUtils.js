@@ -1,3 +1,5 @@
+import { PHONE_WIDTH, PAD_WIDTH } from 'constants/screen';
+
 function couldAdd(arr, item, maxArrLen) {
   if (arr.length < maxArrLen) return true;
   if (arr.length > maxArrLen) return false;
@@ -23,14 +25,14 @@ function transform(arr, maxArrLen) {
 
 export function bingo(arr) {
   const result = [];
-  if (window.innerWidth < 600) {
+  if (window.innerWidth < PHONE_WIDTH) {
     while (arr.length) {
       result.push(arr.splice(0, 4));
     }
     return result;
   }
 
-  if (window.innerWidth < 820) {
+  if (window.innerWidth < PAD_WIDTH) {
     return transform(arr, 1);
   }
 

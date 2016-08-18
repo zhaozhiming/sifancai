@@ -65,7 +65,7 @@
   color: #00336e;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .item-responsive {
     flex-direction: row;
     border-left: 1px solid #ded5c8;
