@@ -58,7 +58,7 @@ module.exports = {
         exclude: srcPath,
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192',
       },
     ],
