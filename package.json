@@ -11,6 +11,7 @@
     "dist": "npm run clean && npm run webpack:client-prod",
     "start": "CLIENT_PORT=4000 NODE_ENV=development webpack-dev-server --inline --config webpack/client.js",
     "start:dist": "npm run dist && cp index.html dist/ && cd dist && open index.html",
+    "deploy": "npm run dist && rm docs/assets/*.* && cp -r dist/assets docs && cp index.html docs ",
     "precommit": "npm run check && npm test",
     "commitmsg": "node validate-commit-msg.js"
   },
