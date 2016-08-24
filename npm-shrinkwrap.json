@@ -2995,6 +2995,18 @@
       "from": "json-schema@0.2.2",
       "resolved": "https://registry.npm.taobao.org/json-schema/download/json-schema-0.2.2.tgz"
     },
+    "json-socket": {
+      "version": "0.1.2",
+      "from": "json-socket@>=0.1.2 <0.2.0",
+      "resolved": "https://registry.npm.taobao.org/json-socket/download/json-socket-0.1.2.tgz",
+      "dependencies": {
+        "async": {
+          "version": "0.1.22",
+          "from": "async@>=0.1.0 <0.2.0",
+          "resolved": "https://registry.npm.taobao.org/async/download/async-0.1.22.tgz"
+        }
+      }
+    },
     "json-stable-stringify": {
       "version": "1.0.1",
       "from": "json-stable-stringify@>=1.0.0 <2.0.0",
