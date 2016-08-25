@@ -5,8 +5,23 @@ const styleLintPlugin = require('stylelint-webpack-plugin');
 
 const srcPath = path.join(__dirname, '/../src');
 const modulesPath = path.join(__dirname, '/../node_modules');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 
+const plugins = [
+  new webpack.NoErrorsPlugin(),
+  new webpack.ProvidePlugin({
+    'Promise': 'bluebird',
+  }),
+  new ExtractTextPlugin('[name].css', { allChunks: true }),
+  new styleLintPlugin({
+    configFile: path.join(__dirname, '../.stylelintrc'),
+    files: '../src/**/*.css',
+  }),
+];
+
+if (process.env.NODE_ENV === 'development') {
+  const DashboardPlugin = require('webpack-dashboard/plugin');
+  plugins.push(new DashboardPlugin());
+}
 
 module.exports = {
   cache: false,
@@ -61,18 +76,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.ProvidePlugin({
-      'Promise': 'bluebird',
-    }),
-    new ExtractTextPlugin('[name].css', { allChunks: true }),
-    new styleLintPlugin({
-      configFile: path.join(__dirname, '../.stylelintrc'),
-      files: '../src/**/*.css',
-    }),
-    new DashboardPlugin(),
-  ],
+  plugins,
   postcss: () => {
     return [
       require('autoprefixer')({
